@@ -31,6 +31,9 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 
+/* Angular material */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'add-student' },
   { path: 'add-student', component: AddStudentComponent },
@@ -39,7 +42,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), BrowserAnimationsModule],
   exports: [RouterModule]
 })
 
