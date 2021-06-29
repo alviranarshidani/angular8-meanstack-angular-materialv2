@@ -40,6 +40,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 /* Angular 8 http service */
 import { HttpClientModule } from '@angular/common/http';
 
+/* Angular 8 CRUD services */
+import { ApiService } from './shared/api.service';
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'add-student' },
   { path: 'add-student', component: AddStudentComponent },
@@ -65,6 +68,7 @@ const routes: Routes = [
     AngularMaterialModule,
     HttpClientModule
   ],
+  providers: [ApiService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
