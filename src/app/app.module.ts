@@ -43,6 +43,9 @@ import { HttpClientModule } from '@angular/common/http';
 /* Angular 8 CRUD services */
 import { ApiService } from './shared/api.service';
 
+/* Reactive form services in Angular 8 */
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'add-student' },
   { path: 'add-student', component: AddStudentComponent },
@@ -66,7 +69,9 @@ const routes: Routes = [
   imports: [
     BrowserAnimationsModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ApiService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
