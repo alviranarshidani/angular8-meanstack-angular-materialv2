@@ -37,6 +37,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './material.module';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+/* Angular 8 http service */
+import { HttpClientModule } from '@angular/common/http';
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'add-student' },
   { path: 'add-student', component: AddStudentComponent },
@@ -60,6 +63,7 @@ const routes: Routes = [
   imports: [
     BrowserAnimationsModule,
     AngularMaterialModule,
+    HttpClientModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
