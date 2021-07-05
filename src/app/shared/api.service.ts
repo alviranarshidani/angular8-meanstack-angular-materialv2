@@ -126,15 +126,15 @@ export class ApiService {
   //   return this.http.get(API_URL, { headers: this.headers })
   //     .pipe(
   //       map((res: Response) => {
-  //         return res || {}
+  //         return res ? res : {}
   //       }),
   //       catchError(this.errorMgmt)
   //     )
   // }
 
 
-   // Get student
-   GetStudent(id: any): Observable<any> {
+  //  // Get student
+  GetStudent(id: any): Observable<any> {
     let API_URL = `${this.endpoint}/read-student/${id}`;
     return this.http.get(API_URL, { headers: this.headers })
       .pipe(

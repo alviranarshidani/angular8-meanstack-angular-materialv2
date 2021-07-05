@@ -26,6 +26,9 @@
 //--Setting up Routes to navigate between components.
 //import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
 /* Angular 8 components */
 import { AddStudentComponent } from './components/add-student/add-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
@@ -62,6 +65,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
+    AppComponent,
     AddStudentComponent,
     EditStudentComponent,
     StudentsListComponent
@@ -71,9 +75,11 @@ const routes: Routes = [
     AngularMaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ApiService],
+  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
